@@ -1,11 +1,32 @@
 <?php
+/**
+ * Visualització de productes existents i gestió bàsica.
+ *
+ * Aquesta classe estableix la connexió amb la base de dades i
+ * mostra una taula amb tots els productes i les seves categories.
+ *
+ * Permet també accedir a accions d'alta, modificació o eliminació.
+ * 
+ * @author Carles Canals Gozálvez
+ * @version 1.0
+ */
 
 require_once('Connexio.php');
 require_once('Header.php');
 
+/**
+ * Classe Principal: carrega i mostra la informació dels productes.
+ */
 class Principal {
     
-    // Método para mostrar la lista de productos
+    /**
+     * Llista els productes amb opcions de gestió.
+     *
+     * Fa una consulta SQL que recupera tots els productes
+     * associats amb les seves categories i imprimeix una taula HTML dinàmica.
+     *
+     * @return void
+     */
     public function mostrarProductes() {
         // Obtiene la conexión a la base de datos
         $conexionObj = new Connexio();
