@@ -1,4 +1,13 @@
 <?php
+/**
+ * Gestió d'inserció de nous productes a la base de dades.
+ *
+ * Aquest arxiu presenta un formulari on l'usuari pot introduir
+ * dades d'un producte nou, validar-les i desar-les a la taula `productes`.
+ *
+ * @author Guillermo Nicolau Orfila
+ * @version 1.0
+ */
 require_once('Connexio.php');
 require_once('Header.php');
 // Missatge conflictiu
