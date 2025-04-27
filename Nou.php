@@ -1,7 +1,7 @@
 <?php
 require_once('Connexio.php');
 require_once('Header.php');
-
+//Missatge conflictiu
 // Crear connexió
 $connexioObj = new Connexio();
 $connexio = $connexioObj->obtenirConnexio();
