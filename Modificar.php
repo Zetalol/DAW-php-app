@@ -1,11 +1,33 @@
 <?php
+/**
+ * Classe encarregada de gestionar l'edició de productes.
+ *
+ * Mostra un formulari preomplert amb les dades actuals d'un producte,
+ * permetent modificar-ne el contingut i actualitzar-lo posteriorment
+ * a la base de dades.
+ * 
+ * @author Carles Canals Gozálvez
+ * @version 1.0
+ */
 
 require_once('Connexio.php');
 require_once('Header.php');
 
+/**
+ * Classe Modificar per carregar i mostrar dades d'un producte concret.
+ */
 class Modificar {
 
-    // Método para mostrar el formulario de modificación del producto
+     /**
+     * Imprimeix el formulari per editar les dades d'un producte.
+     *
+     * Aquest mètode valida el ID proporcionat, consulta la base de dades
+     * i genera el formulari HTML amb camps preomplerts perquè l'usuari pugui
+     * actualitzar les dades del producte.
+     *
+     * @param int|null $id Identificador del producte.
+     * @return void
+     */
     public function mostrarFormulari($id) {
         // Verifica si el ID del producto es válido
         if (!isset($id) || !is_numeric($id)) {
