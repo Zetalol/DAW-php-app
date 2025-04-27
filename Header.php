@@ -1,8 +1,27 @@
 <?php
-
+/**
+ * Classe que genera la part superior del lloc web.
+ *
+ * Aquesta classe crea l'estructura inicial de l'HTML, 
+ * incorpora estils de Bootstrap i personalitzats, 
+ * a més d'incloure una barra de navegació i un carrusel d'imatges.
+ *
+ * @author Carles Canals Gozálvez
+ * @version 1.0
+ */
 class Header {
     
-    // Método para mostrar el encabezado
+    /**
+     * Renderitza l'encapçalament complet de la pàgina.
+     *
+     * El mètode imprimeix:
+     * - Metadades bàsiques i enllaços a CSS.
+     * - Barra de navegació amb logotip i menús.
+     * - Carrusel d'imatges dinàmic.
+     * Tot estructurat amb Bootstrap per garantir la responsivitat.
+     *
+     * @return void
+     */
     public function mostrarHeader() {
         // Imprime la estructura básica de un documento HTML con el encabezado y los estilos
         echo '<!DOCTYPE html>
