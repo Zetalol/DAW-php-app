@@ -1,11 +1,34 @@
 <?php
+/**
+ * Script per actualitzar un producte existent a la base de dades.
+ *
+ * Aquesta classe rep les dades del formulari, les valida
+ * i actualitza el registre corresponent.
+ *
+ * Utilitza la classe Connexio per gestionar la connexió MySQL.
+ * 
+ * @author Carles Canals Gozálvez
+ * @version 1.0
+ */
 
 // Incluye el archivo de conexión
 require_once('Connexio.php');
 
+/**
+ * Classe que proporciona funcionalitat per modificar productes a la BD.
+ */
 class Actualitzar {
     
-    // Método para actualizar un producto en la base de datos
+   /**
+     * Actualitza un producte existent amb les dades proporcionades.
+     *
+     * @param int    $id ID del producte.
+     * @param string $nom Nom del producte.
+     * @param string $descripcio Descripció del producte.
+     * @param float  $preu Preu del producte.
+     * @param int    $categoria ID de la categoria associada.
+     * @return void
+     */
     public function actualizar($id, $nom, $descripcio, $preu, $categoria) {
         // Verifica si todos los campos requeridos están presentes
         if (!isset($id) || !isset($nom) || !isset($descripcio) || !isset($preu) || !isset($categoria)) {
